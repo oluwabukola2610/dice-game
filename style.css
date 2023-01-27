@@ -36,6 +36,23 @@ main {
   display: flex;
 }
 
+input{
+  width: 50%;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  border-style: hidden;
+  text-align: center;
+  font-size: medium;
+  color: white;
+  text-transform: capitalize;
+
+}
+button{
+  border-radius: 20%;
+  width: 20%;
+  border: none;
+
+}
+
 .player {
   flex: 50%;
   padding: 9rem;

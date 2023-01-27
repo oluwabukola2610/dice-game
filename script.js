@@ -6,6 +6,7 @@ const score1El = document.querySelector('#score--1');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
 const diceImg = document.querySelector('.dice');
+
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceImg.classList.add('hidden');
@@ -62,14 +63,30 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
-        diceImg.classList.add('hidden');
-
+      diceImg.classList.add('hidden');
+      document.getElementById(`current--${activePlayer}`).textContent = 0;
     } else {
       switchPlayer();
     }
   }
 });
 
-btnNew.addEventListener('click', function(){
-    window.location.reload()
-})
+btnNew.addEventListener('click', function () {
+  window.location.reload();
+});
+///input name
+const btn = document.querySelector('.click-me');
+const btn1 = document.querySelector('.click-me1');
+const input = document.querySelector('.input-name');
+const input1 = document.querySelector('.input-name1');
+
+btn.addEventListener('click', function () {
+  document.querySelector('#name--0').textContent = input.value;
+  input.classList.add('hidden');
+  btn.classList.add('hidden');
+});
+btn1.addEventListener('click', function () {
+  document.querySelector('#name--1').textContent = input1.value;
+  input1.classList.add('hidden');
+  btn1.classList.add('hidden');
+});
